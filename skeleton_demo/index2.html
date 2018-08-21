@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>skeleton demo</title>
+    <style>
+        @keyframes shine {
+            to {
+                background-position: 100% 0, 0 0;
+            }
+        }
+
+        .container {
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .skeleton-img {
+            width: 50px;
+            height: 50px;
+            background-image: linear-gradient(100deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80%), linear-gradient(#ebeced 50px, transparent 0);
+            background-size: 25vw 180px, 72vw 140px;
+            background-repeat: repeat-y;
+            background-position: 0 0, 0 0;
+            animation: shine 1s infinite;
+        }
+
+
+        .skeleton-longlist {
+            padding: 0;
+            margin: 0;
+            margin-top: 20px;
+        }
+
+        .skeleton-longlist li {
+            list-style: none;
+            margin-top: 20px;
+            width: 100vw;
+            height: 20px;
+            background-image: linear-gradient(140deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80%), linear-gradient(#ebeced 50px, transparent 0);
+            background-size: 10vw 50px, 30vw 30px; /* 确定实际渲染的宽度*/
+            background-repeat: repeat-y;
+            background-position: 0 0, 0 0; /*重要 设置遮罩层的初始位置 */
+            animation: shine 1.8s infinite;
+        }
+
+        .loading-list {
+            margin: auto;
+            margin-top: 50px;
+            width: 100vw;
+            height: 140px;
+            background-image: linear-gradient(100deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80%), linear-gradient(#ebeced 16px, transparent 0);
+            background-repeat: repeat-y;
+            background-size: 25vw 180px, 72vw 140px;
+            background-position: 0 0, 0 0, 0 40px, 0 80px, 0 120px;
+            -webkit-animation: shine 1s infinite;
+            animation: shine 1s infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="skeleton-img"></div>
+        <ul class="skeleton-longlist">
+            <li class="skeleton-list"></li>
+            <li class="skeleton-list"></li>
+            <li class="skeleton-list"></li>
+            <li class="skeleton-list"></li>
+            <li class="skeleton-list"></li>
+        </ul>
+    </div>
+    <div>
+        <div class="loading-list"></div>
+    </div>
+</body>
+
+</html>

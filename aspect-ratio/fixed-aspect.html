@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .demo-container,
+        .container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-top: 56.25%/* 9 / 16 * 100% */
+        }
+
+        .embed-img,
+        .embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #cccccc
+        }
+
+        .normal-img,
+        .embed-img {
+            background-image: url('../assets/giphy.gif');
+            background-size: 100% 100%;
+            background-repeat: none;
+        }
+
+        .normal-img{
+            width: 100%;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="embed"></div>
+    </div>
+    <hr>
+    <span>fix-ratio</span>
+    <p>always 16:9 when resize the window</p>
+    <div class="demo-container">
+        <div class="embed-img"></div>
+    </div>
+    <hr>
+    <span>normal-img</span>
+    <p>how to set proper height to keep the picture's aspect ratio?</p>
+    <div class="normal-img"></div>
+</body>
+
+</html>

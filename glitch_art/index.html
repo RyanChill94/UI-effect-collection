@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @keyframes crt-me {
+            0% {
+                clip-path:inset(27px 0px 44px 0px);
+            }
+            10% {
+                clip-path: inset(12px 0 10px 0)
+            }
+            20% {
+                clip-path: inset(85px 0 77px 0)
+            }
+            30% {
+                clip-path:inset(27px 0px 44px 0px);
+            }
+            40% {
+                clip-path: inset(64px 0 98px 0)
+            }
+            50% {
+                clip-path: inset(5px 0 40px 0)
+            }
+            60% {
+                clip-path:inset(27px 0px 44px 0px);
+            }
+            70% {
+                clip-path: inset(2px 0 12px 0)
+            }
+            80% {
+                clip-path: inset(2px 0 12px 0)
+            }
+            90% {
+                clip-path:inset(27px 0px 44px 0px);
+            }
+            100% {
+                clip-path:inset(70px 0px 0px 0px);
+            }
+        }
+
+        body {
+            background: black
+        }
+
+        .content {
+            width: 50%;
+            margin: 50px auto;
+            text-align: center
+        }
+
+        .glitch-text {
+            position: relative;
+            font-size: 60px;
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: -3px -3px RGBA(255, 0, 72, 1.00), 3px 3px RGBA(1, 245, 237, 1.00);
+        }
+
+        .glitch-text:after {
+            content: attr(data-text);
+            position: absolute;
+            text-shadow:none;
+            text-shadow: 3px 3px RGBA(1, 25, 225, 1.00);
+            left: -2px;
+            top: 0;
+            color: white;
+            background: black;
+            overflow: hidden;
+            animation: crt-me 2000ms infinite linear alternate-reverse;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <span class="glitch-text" data-text="MU">
+            MU
+        </span>
+    </div>
+</body>
+
+</html>

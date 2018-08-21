@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>clip-path-test</title>
+    <style>
+        .img-block {
+            background: url(../../assets/cat.jpeg) no-repeat;
+            background-size: cover;
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+        }
+
+        .img-block-triangle1 {
+            background-color: #C5075C;
+            background-image:url(../../assets/200.gif);
+            background-blend-mode: screen;
+        }
+
+         .img-block-triangle2 {
+            background-color: #03B897;
+            background-image:url(../../assets/giphy.gif);
+            opacity: 0.8;
+            background-blend-mode: screen;            
+        }
+
+        .path-style-1 {
+            clip-path: circle(50%);
+        }
+
+        .path-style-2 {
+            clip-path: inset(10% round 10% 50% 10% 50%);
+            ;
+        }
+
+        .path-style-3 {
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+
+        .path-style-4 {
+            clip-path: inset(10%);
+        }
+
+
+        .path-style-5 {
+            clip-path: url(#path1);
+        }
+
+        .path-style-6 {
+            clip-path: polygon(626px 463px, 765px 236px, 687px 31px, 271px 100px, 70px 10px, 49px 250px, 133px 406px, 374px 462px, 529px 393px);
+        }
+
+        .path-style-7{
+            clip-path: polygon( 43% 0, 62% 0, 52% 26%, 69% 20%, 32% 100%, 42% 40%, 26% 46%);
+        }
+        .path-style-8,
+        .path-style-9 {
+            clip-path: url(#triangle-path);
+        }
+    </style>
+</head>
+
+<body>
+    <svg width='0' height='0'>
+        <defs>
+            <clipPath id="path1">
+                <rect x="50" y="50" width="20" height="20" />
+            </clipPath>
+        </defs>
+    </svg>
+
+
+    <svg width='0' height='0'>
+        <defs>
+            <clipPath id="triangle-path" clipPathUnits="objectBoundingBox">
+                <path d="M0.500, 0.945 L0.994, 0.090 L0.006, 0.090 L0.500, 0.945 L0.500, 0.650 L0.262, 0.238 L0.738, 0.237 L0.500, 0.650z"></path>
+            </clipPath>
+        </defs>
+    </svg>
+
+    <div class="img-block path-style-1"></div>
+    <div class="img-block path-style-2"></div>
+    <div class="img-block path-style-3"></div>
+    <div class="img-block path-style-4"></div>
+    <div class="img-block path-style-5"></div>
+    <div class="img-block path-style-6"></div>
+    <div class="img-block path-style-7"></div>
+    <div class="img-block img-block-triangle1 path-style-8"></div>
+    <div class="img-block img-block-triangle2 path-style-9"></div>
+</body>
+
+</html>
