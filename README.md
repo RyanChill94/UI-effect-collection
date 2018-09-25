@@ -8,7 +8,5 @@
 - [Glitch Art](https://ryanchill94.github.io/UI-effect-collection/dist/glitch_art/index.html)
 - [Floating Panel](https://ryanchill94.github.io/UI-effect-collection/dist/floating_panel/index.html)
 - [Hover Label](https://ryanchill94.github.io/UI-effect-collection/dist/hover_label/index.html)
-- [Hover Label](https://ryanchill94.github.io/UI-effect-collection/dist/hover_label/index.html)
-
 
 
