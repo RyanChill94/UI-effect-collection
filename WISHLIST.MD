@@ -3,3 +3,5 @@
 - Parallax Scrolling
 
 - floating panel
+
+- Trigonometric 【wave】
